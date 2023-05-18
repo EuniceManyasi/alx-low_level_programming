@@ -29,15 +29,15 @@ char *string_nconcat(char *str1, char *str2, unsigned int n)
 
 	while (i < len1)
 	{
-		ptr_s[i] = s1[i];
+		ptr_s[i] = str1[i];
 		i++;
 	}
 
 	while (n < len2 && i < (len1 + n))
-		s[i++] = s2[j++];
+		ptr_s[i++] = str2[j++];
 
 	while (n >= len2 && i < (len1 + len2))
-		ptr_s[i++] = s2[j++];
+		ptr_s[i++] = str2[j++];
 
 	ptr_s[i] = '\0';
 
